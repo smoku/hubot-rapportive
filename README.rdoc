@@ -1,0 +1,18 @@
+== HUBOT Rapportive
+
+Plugin for HUBOT that finds email address based on first name, last name and domain. It uses Rapportive API to check if email is registered with services like LinkedIn, Facebook etc.
+
+== Installation
+
+Put rapportive.coffee in hubot/scripts directory.
+
+== Usage
+
+hubot find email of <first_name> <last_name> from <domain>
+
+Example:
+hubot find email of Pawel Smoczyk from georun.com
+
+== License
+
+MIT License
