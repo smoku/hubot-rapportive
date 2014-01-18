@@ -28,7 +28,8 @@ module.exports = (robot) ->
     
     msg.send "On it!"
     
-    request "https://rapportive.com/login_status?user_email=whatever.rand.23141@gmail.com", (error, response, body) ->
+    randomEmail = "#{Math.random().toString(36).substr(2, 8)}@gmail.com"
+    request "https://rapportive.com/login_status?user_email=#{randomEmail}", (error, response, body) ->
       if !error and response.statusCode == 200
         sessionToken = JSON.parse(body)["session_token"]
         headers = { "X-Session-Token": sessionToken }
